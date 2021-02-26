@@ -9,8 +9,24 @@
   <body>
     <h1>Heading</h1>
     <quiz-answer answer="trees"></quiz-answer>
+    <input type="button" onclick="toggleDisplay('trees')" value="toggle"/>
     <br />
     <quiz-answer class="highlight" answer="hidebound"></quiz-answer>
+    <input type="button" onclick="toggleDisplay('hidebound')" value="toggle"/>
     <script src="index.js"></script>
+    <script>
+      const [trees, hidebound] = document.body.querySelectorAll("quiz-answer")
+
+      function toggleDisplay(which) {
+        switch (which) {
+          case 'trees':
+            trees.show = trees.show === 'false' ? 'true' : 'false'
+            break
+          case 'hidebound':
+            hidebound.show = hidebound.show === 'false' ? 'true' : 'false'
+            break
+        }
+      }
+    </script>
   </body>
 </html>

@@ -39,7 +39,7 @@ window.customElements.define('quiz-answer', class extends HTMLElement {
   }
 
   get show() {
-    return this.getAttribute('show')
+    return this.getAttribute('show') ?? 'false'
   }
 
   set show(shouldShow) {
