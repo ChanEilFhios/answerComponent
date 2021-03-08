@@ -31,7 +31,7 @@ window.customElements.define('quiz-answer', class extends HTMLElement {
   }
 
   get answer() {
-    return this.getAttribute('answer')
+    return this.getAttribute('answer') ?? ''
   }
 
   set answer(newAnswer) {
